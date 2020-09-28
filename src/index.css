@@ -1,0 +1,86 @@
+.link-like:hover {
+  cursor: pointer;
+  opacity: 0.75;
+} 
+
+.homepage-top-open {
+  width: 100%;
+  overflow: hidden;
+  transition: width 0.7s ease-in-out;
+}
+
+.homepage-top-open:hover, .homepage-top-reduce:hover {
+  cursor: pointer;
+}
+
+.homepage-top-reduce {
+  width: 40px;
+  overflow: hidden;
+  transition: width 0.7s ease-in-out;
+}
+
+.homepage-top-arrow {
+  top: 50%;
+  opacity: 1;
+  transition: opacity 0.35s 0.35s linear !important;
+}
+
+.homepage-top-scale-img {
+  height: 70%;
+  top: 6%;
+  transition: height 0.4s linear, top 0.4s linear, opacity 0.35s linear;
+}
+
+.homepage-top-scale {
+  top: 80%;
+  transform: scale(1);
+  transition: transform 0.4s linear, top 0.4s linear, opacity 0.35s linear;
+}
+
+.homepage-top-open .homepage-top-scale-img,.homepage-top-open .homepage-top-scale {
+  opacity: 1;
+  transition: height 0.4s linear, top 0.4s linear, opacity 0.35s 0.35s linear, transform 0.4s linear;
+}
+
+.homepage-top-open .homepage-top-arrow {
+  opacity: 0;
+  transition: opacity 0.35s linear;
+}
+
+.homepage-top-reduce .homepage-top-scale-img,.homepage-top-reduce .homepage-top-scale {
+  opacity: 0;
+}
+
+.homepage-top-open:hover .homepage-top-scale {
+  top: 82.5%;
+  transform: scale(1.15);
+}
+
+.homepage-top-open:hover .homepage-top-scale-img {
+  height: 75%;
+  top: 3.5%;
+}
+
+.axis {
+  stroke-width: 2;
+}
+
+.line {
+  fill: none;
+  stroke: #f44336;
+  stroke-width: 3;
+}
+
+.indicator-circle {
+  fill: #fff;
+}
+
+.indicator-line {
+  fill: none;
+  stroke: #d6d6d6;
+  stroke-width: 3;
+}
+
+.text {
+  fill: #fff;
+}

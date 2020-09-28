@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isWriterOrAdmin() {
+      return request.auth.token.writer == true || request.auth.token.admin == true;
+    }
+
+    match /article_contents/{articleId} {
+      allow read;
+      allow write: if isWriterOrAdmin();
+    }
+
+    match /article_meta/{articleId} {
+      allow read;
+      allow write: if isWriterOrAdmin();
+    }
+
+    match /article_comments/{any} {
+      allow read, write;
+    }
+  }
+}
